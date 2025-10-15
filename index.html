@@ -3,49 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Registration Form</title>
+  <title>User Registration Form (Table Layout)</title>
   <link rel="stylesheet" href=".css">
 </head>
 <body>
   <form action="#" method="post">
     <fieldset>
       <legend>Personal Details</legend>
+      <table>
+        <tr>
+          <td><label for="fullname">Full name:</label></td>
+          <td><input type="text" id="fullname" name="fullname" placeholder="Last Name, First Name, Middle Name" required></td>
+        </tr>
 
-      <label for="fullname">Full name</label>
-      <input type="text" id="fullname" name="fullname" placeholder="Last Name, First name, Middle Name" required>
+        <tr>
+          <td><label for="Date">Date:</label></td>
+          <td><input type="date" id="Date" name="date" required></td>
+        </tr>
 
-      <label for="Date">Date</label>
-      <input type="date" id="Date" required>
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="email" id="email" name="email" placeholder="username@example.com" required></td>
+        </tr>
 
-      <label for="email">Email</label>
-      <input type="email" id="email"  placeholder="username@example.com" required>
+        <tr>
+          <td><label for="password">Password:</label></td>
+          <td><input type="password" id="password" name="password" required></td>
+        </tr>
 
-      <label for="password">Password</label>
-      <input type="password" id="password" required >
+        <tr>
+          <td><label for="age">Age:</label></td>
+          <td><input type="number" id="age" name="age"></td>
+        </tr>
 
-      <label for="age">Age</label>
-      <input type="age" id="age" >
-
-      <label for="mobile number">Mobile Number</label>
-      <input type="mobile number" id="mobile number" placeholder="### ###" required>
+        <tr>
+          <td><label for="mobile">Mobile Number:</label></td>
+          <td><input type="tel" id="mobile" name="mobile" placeholder="0912-345-6789" required></td>
+        </tr>
+      </table>
     </fieldset>
 
     <fieldset>
       <legend>Preferences</legend>
+      <table>
+        <tr>
+          <td><strong>Bears:</strong></td>
+          <td>
+            <label><input type="radio" name="bears" value="panda" required> Panda Bear</label><br>
+            <label><input type="radio" name="bears" value="polar" required> Polar Bear</label><br>
+            <label><input type="radio" name="bears" value="grizzly" required> Grizzly Bear</label><br>
+          </td>
+        </tr>
 
-      <legend>Bears</legend>
-      <label><input type="radio" name="bears" value="bears"> Panda Bear</label>
-      <label><input type="radio" name="bears" value="bears"> Polar Bear </label>
-      <label><input type="radio" name="bears" value="bears"> Grizzly Bear</label>
+        <tr>
+          <td><strong>Eagles:</strong></td>
+          <td>
+            <label><input type="checkbox" name="eagles" value="philippine" required> Philippine Eagle</label><br>
+            <label><input type="checkbox" name="eagles" value="harpy" required> Harpy Eagle</label><br>
+            <label><input type="checkbox" name="eagles" value="bald" required> Bald Eagle</label>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
 
-      <legend>Eagles</legend>
-      <label><input type="checkbox" name="eagles" value="eagles"> Philippine Eagle</label>
-      <label><input type="checkbox" name="eagles" value="eagles"> Harpy Eagle</label>
-      <label><input type="checkbox" name="eagles" value="eagles"> Bold Eagle</label>
-      
-      <div class="buttons">
-        <button type="reset">Reset</button>
-        <button type="submit">Submit</button>
+    <div class="buttons">
+      <button type="reset">Reset</button>
+      <button type="submit">Submit</button>
+    </div>
   </form>
 </body>
 </html>
